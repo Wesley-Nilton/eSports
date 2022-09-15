@@ -26,6 +26,26 @@ body *{
     line-height: 160%;
 }
 
+/* HEADER */
+header{
+    height: 12rem;
+    margin-top: 32px;
+}
+
+header div{
+    display: flex;
+    width: 12rem;
+    margin: 0 auto;
+    padding: .4rem;
+    border-radius: 100%;
+    background-image: var(--gradient-color);
+}
+
+header img{
+    width: 100%;
+    border-radius: 100%;
+}
+
 /* MAIN */
 main{
     display: grid;
