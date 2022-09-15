@@ -37,8 +37,14 @@ header div{
     width: 12rem;
     margin: 0 auto;
     padding: .4rem;
+    animation: fromTop .3s .2s backwards;
+    transition: transform .3s;
     border-radius: 100%;
     background-image: var(--gradient-color);
+}
+
+header div:hover{
+    transform: scale(1.1);
 }
 
 header img{
@@ -57,8 +63,21 @@ main{
 
 main section{
     padding-top: .3rem;
+    animation: fromBottom .7s backwards;
     border-radius: 1rem;
     background-image: var(--gradient-color);
+}
+
+main section:nth-child(1){
+    animation-delay: 0;
+}
+
+main section:nth-child(2){
+    animation-delay: .4s;
+}
+
+main section:nth-child(3){
+    animation-delay: .8s;
 }
 
 section div{
@@ -87,6 +106,14 @@ section ul{
     margin-top: 2.4rem;
 }
 
+section ul li{
+    transition: transform .3s;
+}
+
+section ul li:hover{
+    transform: scale(1.1);
+}
+
 .games-list img{
     width: 9rem;
     border-radius: .8rem;
@@ -100,4 +127,25 @@ section ul{
 
 .social-list img{
     width: 3.2rem;
+}
+
+/* ANIMATIONS */
+@keyframes fromTop{
+    from{
+        opacity: 0;
+        transform: translateY(-3rem);
+    } to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fromBottom{
+    from{
+        opacity: 0;
+        transform: translateY(3rem);
+    } to{
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
